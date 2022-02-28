@@ -21,3 +21,8 @@ services:
        - ./certbot/conf/:/etc/letsencrypt
        - ./certbot/logs/:/var/log/letsencrypt
        - ./certbot/data:/usr/share/nginx/html/letsencrypt
+
+  webapp:
+    image: httpd
+    ports:
+      - 8080:80        
